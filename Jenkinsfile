@@ -41,20 +41,6 @@ pipeline {
                 }
             }
         }
-        stage('Install frontend Dependencies') {
-            steps {
-                dir("frontend"){
-                      sh "npm install"
-                }
-            }
-        }
-        stage('Install backend Dependencies') {
-            steps {
-                dir("frontend"){
-                      sh "npm install"
-                }
-            }
-        }
         stage("build image") {
             steps {
                 script {
