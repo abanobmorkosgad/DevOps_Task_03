@@ -6,6 +6,10 @@ pipeline {
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
+        REPO_SERVER = "abanobmorkos10"
+        REPO_NAME_BACKEND = "${REPO_SERVER}/backend_pwc"
+        REPO_NAME_FRONTEND = "${REPO_SERVER}/frontend_pwc"
+        IMAGE_VERSION = "${BUILD_NUMBER}"
     }
     stages {
         stage("SonarQube Analysis - Frontend") {
@@ -46,6 +50,22 @@ pipeline {
             steps {
                 dir("frontend"){
                       sh "npm install"
+                }
+            }
+        }
+        stage("build image") {
+            steps {
+                script {
+                    echo "building docker images ..."
+                    withCredentials([
+                        usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')
+                    ]){
+                        sh "docker login -u ${USER} -p ${PASS}"
+                        sh "docker build backend/. -t ${REPO_NAME_BACKEND}:${IMAGE_VERSION}"
+                        sh "docker push ${REPO_NAME_BACKEND}:${IMAGE_VERSION}"
+                        sh "docker build frontend/. -t ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}"
+                        sh "docker push ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}"
+                    }
                 }
             }
         }
