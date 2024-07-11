@@ -10,6 +10,8 @@ pipeline {
         REPO_NAME_BACKEND = "${REPO_SERVER}/backend_pwc"
         REPO_NAME_FRONTEND = "${REPO_SERVER}/frontend_pwc"
         IMAGE_VERSION = "${BUILD_NUMBER}"
+        AWS_ACCESS_KEY_ID = credentials("aws_access_key_id")
+        AWS_SECRET_ACCESS_KEY = credentials("aws_secret_access_key")
     }
     stages {
         stage("SonarQube Analysis - Frontend") {
@@ -75,6 +77,14 @@ pipeline {
                 sh "trivy image ${REPO_NAME_FRONTEND}:${IMAGE_VERSION} > trivy_scan_frontend.txt"
             }
         }
-        
+        stage("change image version in k8s manifests") {
+            steps {
+                script {
+                    echo "change image version .."
+                    sh "sed -i \"s|image:.*|image: ${REPO_NAME_BACKEND}:${IMAGE_VERSION}|g\" k8s_manifests/backend-deployment.yaml"
+                    sh "sed -i \"s|image:.*|image: ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}|g\" k8s_manifests/frontend-deployment.yaml"
+                }
+            }
+        }
     }
 }
