@@ -69,5 +69,12 @@ pipeline {
                 }
             }
         }
+        stage("trivy scan"){
+            steps{
+                sh "trivy image ${REPO_NAME_BACKEND}:${IMAGE_VERSION} > trivy_scan_backend.txt"
+                sh "trivy image ${REPO_NAME_FRONTEND}:${IMAGE_VERSION} > trivy_scan_frontend.txt"
+            }
+        }
+        
     }
 }
