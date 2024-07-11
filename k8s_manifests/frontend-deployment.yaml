@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: abanobmorkos10/frontend_pwc:7
+        image: abanobmorkos10/frontend_pwc:9
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
