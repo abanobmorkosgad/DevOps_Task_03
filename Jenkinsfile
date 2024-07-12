@@ -26,7 +26,7 @@ pipeline {
         stage('Test Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'npm run test --passWithNoTests'
+                    sh 'react-scripts test'
                 }
             }
         }
