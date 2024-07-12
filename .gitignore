@@ -4,4 +4,6 @@ backend/node_modules/
 /backend/.scannerwork/
 /frontend/node_modules/
 frontend/node_modules/
+frontend/build/
+/frontend/build/
 /frontend/.scannerwork/

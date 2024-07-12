@@ -44,46 +44,23 @@ pipeline {
             steps {
                 dir('backend') {
                     sh 'npm install'
-                    sh 'npm run build'
+                    // sh 'npm run build'
                 }
             }
         }
 
-        stage('Test Backend') {
-            steps {
-                dir('backend') {
-                    sh 'npm run test'
-                }
-            }
-        }
-
-        stage('Pack Backend') {
-            steps {
-                dir('backend/build') {
-                    sh 'tar -czf backend-app.tar.gz *'
-                }
-            }
-        }
-
-        // stage('Upload to Nexus') {
+        // stage('Test Backend') {
         //     steps {
-        //         script {
-        //             def frontendFile = 'frontend/build/frontend-app.tar.gz'
-        //             def backendFile = 'backend/build/backend-app.tar.gz'
+        //         dir('backend') {
+        //             sh 'npm run test'
+        //         }
+        //     }
+        // }
 
-        //             nexusArtifactUploader(
-        //                 nexusVersion: 'nexus3',
-        //                 protocol: 'http',
-        //                 nexusUrl: "${env.NEXUS_URL}",
-        //                 groupId: 'com.yourcompany',
-        //                 version: '1.0.0',
-        //                 repository: "${env.NEXUS_REPO}",
-        //                 credentialsId: "${env.NEXUS_CREDENTIALS_ID}",
-        //                 artifacts: [
-        //                     [artifactId: 'frontend-app', classifier: '', file: frontendFile, type: 'gz'],
-        //                     [artifactId: 'backend-app', classifier: '', file: backendFile, type: 'gz']
-        //                 ]
-        //             )
+        // stage('Pack Backend') {
+        //     steps {
+        //         dir('backend/build') {
+        //             sh 'tar -czf backend-app.tar.gz *'
         //         }
         //     }
         // }
