@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: abanobmorkos10/backend_pwc:11
+        image: abanobmorkos10/backend_pwc:12
         imagePullPolicy: Always
         env:
           - name: MONGO_CONN_STR
