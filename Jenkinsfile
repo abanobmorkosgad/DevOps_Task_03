@@ -78,7 +78,7 @@ pipeline {
                     sh '''
                         git config user.email "abanobmorkos10@gmail.com"
                         git config user.name "abanobmorkosgad"
-                        
+
                         git remote set-url origin https://${USER}:${PASS}@github.com/abanobmorkosgad/DevOps_Task_03.git
                         git add .
                         git commit -m "Update deployment image to version ${BUILD_NUMBER}"
