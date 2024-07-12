@@ -10,8 +10,8 @@ pipeline {
         REPO_NAME_BACKEND = "${REPO_SERVER}/backend_pwc"
         REPO_NAME_FRONTEND = "${REPO_SERVER}/frontend_pwc"
         IMAGE_VERSION = "${BUILD_NUMBER}"
-        // AWS_ACCESS_KEY_ID = credentials("aws_access_key_id")
-        // AWS_SECRET_ACCESS_KEY = credentials("aws_secret_access_key")
+        AWS_ACCESS_KEY_ID = credentials("aws_access_key_id")
+        AWS_SECRET_ACCESS_KEY = credentials("aws_secret_access_key")
     }
     stages {
         stage('Build Frontend') {
@@ -112,10 +112,12 @@ pipeline {
             }
         }
 
-        stage("trivy scan"){
+        stage("trivy scan and upload scan file to S3"){
             steps{
                 sh "trivy image ${REPO_NAME_BACKEND}:${IMAGE_VERSION} > trivy_scan_backend.txt"
+                sh "aws s3 cp trivy_scan_backend.txt s3://abanob-pwc-trivy/trivy_scan_backend.txt"
                 sh "trivy image ${REPO_NAME_FRONTEND}:${IMAGE_VERSION} > trivy_scan_frontend.txt"
+                sh "aws s3 cp trivy_scan_frontend.txt s3://abanob-pwc-trivy/trivy_scan_frontend.txt"
             }
         }
 
