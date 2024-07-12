@@ -1,5 +1,5 @@
 
-abanobmorkos10/frontend_pwc:13 (debian 10.13)
+abanobmorkos10/frontend_pwc:14 (debian 10.13)
 =============================================
 Total: 3153 (UNKNOWN: 15, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 
