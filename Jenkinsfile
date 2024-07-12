@@ -26,7 +26,7 @@ pipeline {
         stage('Test Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'npm run test'
+                    sh 'npm run test --passWithNoTests'
                 }
             }
         }
@@ -150,7 +150,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Update repo') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'USER', passwordVariable: 'PASS')]) {

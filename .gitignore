@@ -1,5 +1,7 @@
 # Ignore node_modules in backend and frontend directories
+backend/node_modules/
 /backend/node_modules/
 /backend/.scannerwork/
 /frontend/node_modules/
+frontend/node_modules/
 /frontend/.scannerwork/
