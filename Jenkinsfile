@@ -26,6 +26,7 @@ pipeline {
         stage('Test Frontend') {
             steps {
                 dir('frontend') {
+                    sh 'npm install react-scripts --save'
                     sh 'react-scripts test'
                 }
             }
