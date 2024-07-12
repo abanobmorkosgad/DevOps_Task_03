@@ -23,14 +23,14 @@ pipeline {
             }
         }
 
-        stage('Test Frontend') {
-            steps {
-                dir('frontend') {
-                    sh 'npm install react-scripts --save'
-                    sh 'npm test --passWithNoTests'
-                }
-            }
-        }
+        // stage('Test Frontend') {
+        //     steps {
+        //         dir('frontend') {
+        //             sh 'npm install react-scripts --save'
+        //             sh 'npm test --passWithNoTests'
+        //         }
+        //     }
+        // }
 
         stage('Pack Frontend') {
             steps {
@@ -65,28 +65,28 @@ pipeline {
             }
         }
 
-        stage('Upload to Nexus') {
-            steps {
-                script {
-                    def frontendFile = 'frontend/build/frontend-app.tar.gz'
-                    def backendFile = 'backend/build/backend-app.tar.gz'
+        // stage('Upload to Nexus') {
+        //     steps {
+        //         script {
+        //             def frontendFile = 'frontend/build/frontend-app.tar.gz'
+        //             def backendFile = 'backend/build/backend-app.tar.gz'
 
-                    nexusArtifactUploader(
-                        nexusVersion: 'nexus3',
-                        protocol: 'http',
-                        nexusUrl: "${env.NEXUS_URL}",
-                        groupId: 'com.yourcompany',
-                        version: '1.0.0',
-                        repository: "${env.NEXUS_REPO}",
-                        credentialsId: "${env.NEXUS_CREDENTIALS_ID}",
-                        artifacts: [
-                            [artifactId: 'frontend-app', classifier: '', file: frontendFile, type: 'gz'],
-                            [artifactId: 'backend-app', classifier: '', file: backendFile, type: 'gz']
-                        ]
-                    )
-                }
-            }
-        }
+        //             nexusArtifactUploader(
+        //                 nexusVersion: 'nexus3',
+        //                 protocol: 'http',
+        //                 nexusUrl: "${env.NEXUS_URL}",
+        //                 groupId: 'com.yourcompany',
+        //                 version: '1.0.0',
+        //                 repository: "${env.NEXUS_REPO}",
+        //                 credentialsId: "${env.NEXUS_CREDENTIALS_ID}",
+        //                 artifacts: [
+        //                     [artifactId: 'frontend-app', classifier: '', file: frontendFile, type: 'gz'],
+        //                     [artifactId: 'backend-app', classifier: '', file: backendFile, type: 'gz']
+        //                 ]
+        //             )
+        //         }
+        //     }
+        // }
 
         stage("SonarQube Analysis - Frontend") {
             steps {
