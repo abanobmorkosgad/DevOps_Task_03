@@ -10,8 +10,8 @@ pipeline {
         REPO_NAME_BACKEND = "${REPO_SERVER}/backend_pwc"
         REPO_NAME_FRONTEND = "${REPO_SERVER}/frontend_pwc"
         IMAGE_VERSION = "${BUILD_NUMBER}"
-        AWS_ACCESS_KEY_ID = credentials("aws_access_key_id")
-        AWS_SECRET_ACCESS_KEY = credentials("aws_secret_access_key")
+        // AWS_ACCESS_KEY_ID = credentials("aws_access_key_id")
+        // AWS_SECRET_ACCESS_KEY = credentials("aws_secret_access_key")
     }
     stages {
         stage("SonarQube Analysis - Frontend") {
