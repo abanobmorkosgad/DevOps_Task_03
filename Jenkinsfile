@@ -27,7 +27,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     sh 'npm install react-scripts --save'
-                    sh 'react-scripts test'
+                    sh 'npm test'
                 }
             }
         }
