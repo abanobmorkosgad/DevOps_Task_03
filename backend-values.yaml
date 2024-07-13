@@ -17,3 +17,5 @@ containerEnvVars:
 containerPort: 8080
 servicePort: 8080
 serviceType: LoadBalancer
+serviceAnnotations:
+  service.beta.kubernetes.io/aws-load-balancer-internal: "false"
