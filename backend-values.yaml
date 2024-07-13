@@ -1,6 +1,6 @@
 appName: backend
 appReplicas: 1
-appImage: abanobmorkos10/backend_pwc:22
+appImage: abanobmorkos10/backend_pwc:23
 containerEnvVars:
 - name: MONGO_CONN_STR
   value: mongodb://mongodb-svc:27017/todo?directConnection=true
