@@ -1,4 +1,4 @@
-# Setup setup a robust CI/CD pipeline for a three-tier application consists of:
+# Setup a robust CI/CD pipeline for a three-tier application consists of:
 •	Frontend: React
 •	Backend: Nodejs
 •	Database: Mongodb
