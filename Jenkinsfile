@@ -17,7 +17,7 @@ pipeline {
     }
 
     stages {
-        
+
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
@@ -135,7 +135,7 @@ pipeline {
         //     }
         // }
 
-        stage("change image version in k8s manifests") {
+        stage("change image version in helm values") {
             steps {
                 script {
                     echo "change image version .."
