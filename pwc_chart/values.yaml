@@ -1,0 +1,6 @@
+appName: appname
+appReplicas: 1
+appImage: abanobmorkos10/backend_pwc:14
+containerPort: 8080
+servicePort: 8080
+serviceType: LoadBalancer

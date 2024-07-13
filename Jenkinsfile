@@ -121,15 +121,26 @@ pipeline {
             }
         }
 
+        // stage("change image version in k8s manifests") {
+        //     steps {
+        //         script {
+        //             echo "change image version .."
+        //             sh "sed -i \"s|image:.*|image: ${REPO_NAME_BACKEND}:${IMAGE_VERSION}|g\" k8s_manifests/backend-deployment.yaml"
+        //             sh "sed -i \"s|image:.*|image: ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}|g\" k8s_manifests/frontend-deployment.yaml"
+        //         }
+        //     }
+        // }
+
         stage("change image version in k8s manifests") {
             steps {
                 script {
                     echo "change image version .."
-                    sh "sed -i \"s|image:.*|image: ${REPO_NAME_BACKEND}:${IMAGE_VERSION}|g\" k8s_manifests/backend-deployment.yaml"
-                    sh "sed -i \"s|image:.*|image: ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}|g\" k8s_manifests/frontend-deployment.yaml"
+                    sh "sed -i \"s|appImage:.*|appImage: ${REPO_NAME_BACKEND}:${IMAGE_VERSION}|g\" backend-values.yaml"
+                    sh "sed -i \"s|appImage:.*|appImage: ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}|g\" frontend-values.yaml"
                 }
             }
         }
+
 
         stage('Update repo') {
             steps {
