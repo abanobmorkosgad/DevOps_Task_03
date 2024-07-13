@@ -139,8 +139,8 @@ pipeline {
             steps {
                 script {
                     echo "change image version .."
-                    sh "sed -i \"s|appImage:.*|appImage: ${REPO_NAME_BACKEND}:${IMAGE_VERSION}|g\" backend-values.yaml"
-                    sh "sed -i \"s|appImage:.*|appImage: ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}|g\" frontend-values.yaml"
+                    sh "sed -i \"s|appImage:.*|appImage: ${REPO_NAME_BACKEND}:${IMAGE_VERSION}|g\" values/backend-values.yaml"
+                    sh "sed -i \"s|appImage:.*|appImage: ${REPO_NAME_FRONTEND}:${IMAGE_VERSION}|g\" values/frontend-values.yaml"
                 }
             }
         }
