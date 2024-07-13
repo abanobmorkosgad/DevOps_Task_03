@@ -1,6 +1,6 @@
 appName: frontend
 appReplicas: 1
-appImage: abanobmorkos10/frontend_pwc:21
+appImage: abanobmorkos10/frontend_pwc:22
 containerEnvVars:
 - name: REACT_APP_BACKEND_URL
   value: http://k8s-default-backend-8529f0c89d-3d5ff19096c50937.elb.us-west-2.amazonaws.com:8080/api/tasks
