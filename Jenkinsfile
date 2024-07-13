@@ -1,9 +1,11 @@
 pipeline {
     agent any
+
     tools {
         jdk 'jdk17'
         nodejs 'node16'
     }
+
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
         REPO_SERVER = "abanobmorkos10"
@@ -13,7 +15,9 @@ pipeline {
         AWS_ACCESS_KEY_ID = credentials("aws_access_key_id")
         AWS_SECRET_ACCESS_KEY = credentials("aws_secret_access_key")
     }
+
     stages {
+        
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
