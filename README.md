@@ -46,6 +46,7 @@
     ```
         
 **Step 3: Provision EKS ckuster using Terraform:**
+- terraform:
 
     ```bash
         
@@ -59,8 +60,7 @@
 
 **Install Jenkins for Automation:**
 
-    - Install Jenkins on the EC2 instance to automate deployment:
-    Install Java
+- Install Jenkins on the EC2 instance to automate deployment:
     
     ```bash
     sudo apt update
@@ -314,4 +314,4 @@ pipeline {
     kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d  ##get argocd password
     ```
 
-**define 3 application in argocd for Frontend, Backend and Database**
+**define 3 applications in argocd for Frontend, Backend and Database**
