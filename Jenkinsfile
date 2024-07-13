@@ -118,10 +118,10 @@ pipeline {
 
         stage("trivy scan and upload scan file to S3"){
             steps{
-                sh "trivy image ${REPO_NAME_BACKEND}:${IMAGE_VERSION} > trivy_scan_backend.txt"
-                sh "aws s3 cp trivy_scan_backend.txt s3://abanob-pwc-trivy/trivy_scan_backend.txt"
-                sh "trivy image ${REPO_NAME_FRONTEND}:${IMAGE_VERSION} > trivy_scan_frontend.txt"
-                sh "aws s3 cp trivy_scan_frontend.txt s3://abanob-pwc-trivy/trivy_scan_frontend.txt"
+                sh "trivy image ${REPO_NAME_BACKEND}:${IMAGE_VERSION} > trivy/trivy_scan_backend.txt"
+                sh "aws s3 cp trivy/trivy_scan_backend.txt s3://abanob-pwc-trivy/trivy_scan_backend.txt"
+                sh "trivy image ${REPO_NAME_FRONTEND}:${IMAGE_VERSION} > trivy/trivy_scan_frontend.txt"
+                sh "aws s3 cp trivy/trivy_scan_frontend.txt s3://abanob-pwc-trivy/trivy_scan_frontend.txt"
             }
         }
 

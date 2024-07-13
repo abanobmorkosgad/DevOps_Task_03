@@ -85,21 +85,29 @@
 
 Goto Manage Jenkins →Plugins → Available Plugins →
 
+
 Install below plugins
+
 
 1 Eclipse Temurin Installer (Install without restart)
 
+
 2 SonarQube Scanner (Install without restart)
+
 
 3 NodeJs Plugin (Install Without restart)
 
 
+
 **Configure Java and Nodejs in Global Tool Configuration**
+
 
 Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
 
 
+
 ### SonarQube
+
 
 Create the token
 
@@ -110,7 +118,9 @@ After adding sonar token
 Click on Apply and Save
 
 
+
 **The Configure System option** is used in Jenkins to configure different server
+
 
 
 **Global Tool Configuration** is used to configure different tools that we install using Plugins
@@ -120,8 +130,11 @@ We will install a sonar scanner in the tools.
 Create a Jenkins webhook
 
 
+
 **Configure CI/CD Pipeline in Jenkins:**
+
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
+
 
 **Add DockerHub Credentials**
 
@@ -303,9 +316,12 @@ pipeline {
 ```
 
 
+
 ### **Phase 3: ArgoCD**
 
+
 **install ArgoCD**
+- ArgoCD
 
     ```bash
     kubectl create namespace argocd   ##create argocd namespace
@@ -313,5 +329,6 @@ pipeline {
     kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'  ##make argocd dashboard accessible
     kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d  ##get argocd password
     ```
+
 
 **define 3 applications in argocd for Frontend, Backend and Database**
