@@ -1,7 +1,7 @@
 
-abanobmorkos10/backend_pwc:25 (debian 10.13)
+abanobmorkos10/backend_pwc:26 (debian 10.13)
 ============================================
-Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
+Total: 3281 (UNKNOWN: 139, LOW: 1122, MEDIUM: 1429, HIGH: 571, CRITICAL: 20)
 
 ┌──────────────────────────────┬─────────────────────┬──────────┬──────────────┬──────────────────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library            │    Vulnerability    │ Severity │    Status    │      Installed Version       │        Fixed Version         │                            Title                             │
@@ -5976,8 +5976,12 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2023-6277       │          │ will_not_fix │                              │                              │ libtiff: Out-of-memory in TIFFOpen via a craft file          │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2023-6277                    │
-│                              ├─────────────────────┼──────────┼──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2017-16232      │ LOW      │ affected     │                              │                              │ libtiff: Memory leaks in tif_open.c, tif_lzw.c, and          │
+│                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-6716       │          │ affected     │                              │                              │ libtiff: libtiff: Out-of-memory issue in                     │
+│                              │                     │          │              │                              │                              │ TIFFReadEncodedStrip() may lead to Denial of Service...      │
+│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-6716                    │
+│                              ├─────────────────────┼──────────┤              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2017-16232      │ LOW      │              │                              │                              │ libtiff: Memory leaks in tif_open.c, tif_lzw.c, and          │
 │                              │                     │          │              │                              │                              │ tif_aux.c                                                    │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2017-16232                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -6082,8 +6086,12 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2023-6277       │          │ will_not_fix │                              │                              │ libtiff: Out-of-memory in TIFFOpen via a craft file          │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2023-6277                    │
-│                              ├─────────────────────┼──────────┼──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2017-16232      │ LOW      │ affected     │                              │                              │ libtiff: Memory leaks in tif_open.c, tif_lzw.c, and          │
+│                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-6716       │          │ affected     │                              │                              │ libtiff: libtiff: Out-of-memory issue in                     │
+│                              │                     │          │              │                              │                              │ TIFFReadEncodedStrip() may lead to Denial of Service...      │
+│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-6716                    │
+│                              ├─────────────────────┼──────────┤              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2017-16232      │ LOW      │              │                              │                              │ libtiff: Memory leaks in tif_open.c, tif_lzw.c, and          │
 │                              │                     │          │              │                              │                              │ tif_aux.c                                                    │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2017-16232                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -6188,8 +6196,12 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2023-6277       │          │ will_not_fix │                              │                              │ libtiff: Out-of-memory in TIFFOpen via a craft file          │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2023-6277                    │
-│                              ├─────────────────────┼──────────┼──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2017-16232      │ LOW      │ affected     │                              │                              │ libtiff: Memory leaks in tif_open.c, tif_lzw.c, and          │
+│                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-6716       │          │ affected     │                              │                              │ libtiff: libtiff: Out-of-memory issue in                     │
+│                              │                     │          │              │                              │                              │ TIFFReadEncodedStrip() may lead to Denial of Service...      │
+│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-6716                    │
+│                              ├─────────────────────┼──────────┤              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2017-16232      │ LOW      │              │                              │                              │ libtiff: Memory leaks in tif_open.c, tif_lzw.c, and          │
 │                              │                     │          │              │                              │                              │ tif_aux.c                                                    │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2017-16232                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -7564,18 +7576,12 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              │                     │          │              │                              │                              │ cleanups                                                     │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47408                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2021-47410      │          │              │                              │                              │ kernel: drm/amdkfd: fix svm_migrate_fini warning             │
-│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47410                   │
-│                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2021-47412      │          │              │                              │                              │ kernel: block: don't call rq_qos_ops->done_bio if the bio    │
 │                              │                     │          │              │                              │                              │ isn't tracked                                                │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47412                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2021-47414      │          │              │                              │                              │ kernel: riscv: Flush current cpu icache before other cpus    │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47414                   │
-│                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2021-47431      │          │              │                              │                              │ kernel: drm/amdgpu: fix gart.bo pin_count leak               │
-│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47431                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2021-47432      │          │              │                              │                              │ kernel: lib/generic-radix-tree.c: Don&#39;t overflow in      │
 │                              │                     │          │              │                              │                              │ peek()                                                       │
@@ -10516,6 +10522,10 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-39493      │          │              │                              │                              │ kernel: crypto: qat - Fix ADF_DEV_RESET_SYNC memory leak     │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-39493                   │
+│                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-39495      │          │              │                              │                              │ kernel: greybus: Fix use-after-free bug in                   │
+│                              │                     │          │              │                              │                              │ gb_interface_release due to race condition.                  │
+│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-39495                   │
 │                              ├─────────────────────┼──────────┤              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2004-0230       │ LOW      │              │                              │                              │ TCP, when using a large Window Size, makes it easier for     │
 │                              │                     │          │              │                              │                              │ remote...                                                    │
@@ -10702,6 +10712,12 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              │ CVE-2021-3714       │          │              │                              │                              │ kernel: Remote Page Deduplication Attacks                    │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-3714                    │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2021-47410      │          │              │                              │                              │ kernel: drm/amdkfd: fix svm_migrate_fini warning             │
+│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47410                   │
+│                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2021-47431      │          │              │                              │                              │ kernel: drm/amdgpu: fix gart.bo pin_count leak               │
+│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-47431                   │
+│                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2022-0400       │          │              │                              │                              │ kernel: Out of bounds read in the smc protocol stack         │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2022-0400                    │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -10820,10 +10836,6 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              │ CVE-2024-39494      │          │              │                              │                              │ In the Linux kernel, the following vulnerability has been    │
 │                              │                     │          │              │                              │                              │ resolved: i...                                               │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-39494                   │
-│                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-39495      │          │              │                              │                              │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                              │ resolved: g...                                               │
-│                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-39495                   │
 │                              ├─────────────────────┤          │              │                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-39496      │          │              │                              │                              │ In the Linux kernel, the following vulnerability has been    │
 │                              │                     │          │              │                              │                              │ resolved: b...                                               │
@@ -11417,8 +11429,7 @@ Total: 3278 (UNKNOWN: 140, LOW: 1120, MEDIUM: 1427, HIGH: 571, CRITICAL: 20)
 │                              │                     │          │              │                              │                              │ AuthorizedPrincipalsCommand are configured                   │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2021-41617                   │
 │                              ├─────────────────────┤          ├──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-6387       │          │ affected     │                              │                              │ openssh: Possible remote code execution due to a race        │
-│                              │                     │          │              │                              │                              │ condition in signal...                                       │
+│                              │ CVE-2024-6387       │          │ affected     │                              │                              │ openssh: regreSSHion - race condition in SSH allows RCE/DoS  │
 │                              │                     │          │              │                              │                              │ https://avd.aquasec.com/nvd/cve-2024-6387                    │
 │                              ├─────────────────────┼──────────┼──────────────┤                              ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2023-48795      │ MEDIUM   │ fixed        │                              │ 1:7.9p1-10+deb10u4           │ ssh: Prefix truncation attack on Binary Packet Protocol      │
