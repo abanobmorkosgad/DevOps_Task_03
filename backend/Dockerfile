@@ -1,20 +1,23 @@
-# Use the official Node.js 14 image as a base image
-FROM node:14
+# Stage 1: Build the Node.js application
+FROM node:14 as build
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
-
-# Install the application's dependencies inside the container
+RUN  npm install cors
 RUN npm install
 
-# Copy the rest of the application code to the container
 COPY . .
 
-# Expose Port to the container
-EXPOSE 8080
+FROM nginx:alpine
 
-# Specify the command to run when the container starts
-CMD [ "node", "index.js" ]
+COPY --from=build /app /app
+
+COPY default.conf /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+RUN apk add --no-cache nodejs npm
+
+EXPOSE 80
+
+CMD ["sh", "-c", "node /app/index.js & nginx -g 'daemon off;'"]
