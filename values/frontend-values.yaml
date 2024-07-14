@@ -1,6 +1,6 @@
 appName: frontend
 appReplicas: 1
-appImage: abanobmorkos10/frontend_pwc:43
+appImage: abanobmorkos10/frontend_pwc:44
 containerEnvVars:
 - name: REACT_APP_BACKEND_URL
   value: http://backend.default.svc.cluster.local/api/tasks
