@@ -16,6 +16,6 @@ containerEnvVars:
       key: password
 containerPort: 80
 servicePort: 80
-serviceType: LoadBalancer
+serviceType: ClusterIP
 serviceAnnotations:
   service.beta.kubernetes.io/aws-load-balancer-internal: "false"
