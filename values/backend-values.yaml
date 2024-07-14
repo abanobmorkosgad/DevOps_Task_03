@@ -14,8 +14,8 @@ containerEnvVars:
     secretKeyRef:
       name: mongo-sec
       key: password
-containerPort: 8080
-servicePort: 8080
+containerPort: 80
+servicePort: 80
 serviceType: LoadBalancer
 serviceAnnotations:
   service.beta.kubernetes.io/aws-load-balancer-internal: "false"
