@@ -17,5 +17,5 @@ containerEnvVars:
 containerPort: 80
 servicePort: 80
 serviceType: ClusterIP
-serviceAnnotations:
-  service.beta.kubernetes.io/aws-load-balancer-internal: "false"
+# serviceAnnotations:
+#   service.beta.kubernetes.io/aws-load-balancer-internal: "false"
