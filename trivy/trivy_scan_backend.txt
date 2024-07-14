@@ -1,5 +1,5 @@
 
-abanobmorkos10/backend_pwc:43 (alpine 3.19.2)
+abanobmorkos10/backend_pwc:44 (alpine 3.19.2)
 =============================================
 Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 4, HIGH: 0, CRITICAL: 0)
 
