@@ -14,7 +14,7 @@ containerEnvVars:
     secretKeyRef:
       name: mongo-sec
       key: password
-containerPort: 80
+containerPort: 8080
 servicePort: 80
 serviceType: ClusterIP
 # serviceAnnotations:
