@@ -2,9 +2,9 @@ releases:
   - name: backend
     chart: pwc_chart
     values:
-      - backend-values.yaml
+      - values/backend-values.yaml
     
   - name: frontend
     chart: pwc_chart
     values:
-      - frontend-values.yaml
+      - values/frontend-values.yaml
