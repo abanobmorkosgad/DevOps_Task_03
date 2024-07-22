@@ -27,15 +27,6 @@ pipeline {
             }
         }
 
-        // stage('Test Frontend') {
-        //     steps {
-        //         dir('frontend') {
-        //             sh 'npm install react-scripts --save'
-        //             sh 'npm test --passWithNoTests'
-        //         }
-        //     }
-        // }
-
         stage('Pack Frontend') {
             steps {
                 dir('frontend/build') {
@@ -48,26 +39,9 @@ pipeline {
             steps {
                 dir('backend') {
                     sh 'npm install'
-                    // sh 'npm run build'
                 }
             }
         }
-
-        // stage('Test Backend') {
-        //     steps {
-        //         dir('backend') {
-        //             sh 'npm run test'
-        //         }
-        //     }
-        // }
-
-        // stage('Pack Backend') {
-        //     steps {
-        //         dir('backend/build') {
-        //             sh 'tar -czf backend-app.tar.gz *'
-        //         }
-        //     }
-        // }
 
         stage("SonarQube Analysis - Frontend") {
             steps {
